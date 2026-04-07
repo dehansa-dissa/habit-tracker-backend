@@ -6,6 +6,10 @@ spring.datasource.password=YOUR_PASSWORD_HERE
 
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=false
-spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.open-in-view=false
 
-spring.security.oauth2.resourceserver.jwt.issuer-uri=https://api.asgardeo.io/t/YOUR_ORG_NAME/oauth2/token
+# Get these values from your Asgardeo JWKS endpoint:
+# https://api.asgardeo.io/t/YOUR_ORG/oauth2/jwks
+asgardeo.jwk.n=YOUR_JWK_N_VALUE
+asgardeo.jwk.e=AQAB
+asgardeo.jwk.kid=YOUR_JWK_KID_VALUE
